@@ -1,0 +1,9 @@
+.text-center {
+  text-align: center;
+}
+
+@each $value in $spaces {
+  .mb-#{$value} {
+    margin-bottom: #{$value}rem !important;
+  }
+}
