@@ -6,4 +6,8 @@
   .mb-#{$value} {
     margin-bottom: #{$value}rem !important;
   }
+
+  .mt-#{$value} {
+    margin-top: #{$value}rem !important;
+  }
 }
