@@ -43,11 +43,8 @@
   }
 
   &__list {
-    position: absolute;
-    top: 50%;
-    left: 50%;
+    @include absCenter;
     width: 100%;
-    transform: translate(-50%, -50%);
     list-style: none;
     text-align: center;
   }

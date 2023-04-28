@@ -11,6 +11,18 @@
 	<link rel="shortcut icon" type="image/png" href="img/favicon.png">
 
 	<title>Natours | Exciting tours for adventurous people</title>
+	<script defer type="module">
+		const modal = document.querySelector(".modal")
+		const btns = document.querySelectorAll(".card .btn")
+		
+		modal.querySelector(".modal__close")
+		modal.addEventListener("click", () => modal.classList.remove("modal--is-open"))
+		btns.forEach(btn => {
+			btn.addEventListener("click", () => {
+				modal.classList.toggle("modal--is-open")
+			})
+		})
+	</script>
 </head>
 
 <body>
@@ -41,7 +53,7 @@
 				<span class="heading-primary--sub">is where life happens</span>
 			</h1>
 
-			<a href="#" class="btn btn--white btn--animated">Discover our tours</a>
+			<a href="#tours" class="btn btn--white btn--animated">Discover our tours</a>
 		</div>
 	</header>
 
@@ -162,7 +174,7 @@
 			</div>
 		</section>
 
-		<section class="section-tours">
+		<section class="section-tours" id="tours">
 			<div class="text-center mb-8">
 				<h2 class="heading-secondary">
 					Most popular tours
@@ -192,7 +204,7 @@
 									<p class="card__price-only">Only</p>
 									<p class="card__price-value">297 &euro;</p>
 								</div>
-								<a href="#" class="btn btn--white">Book now!</a>
+								<button class="btn btn--white">Book now!</button>
 							</div>
 						</div>
 					</div>
@@ -220,7 +232,7 @@
 									<p class="card__price-only">Only</p>
 									<p class="card__price-value">497 &euro;</p>
 								</div>
-								<a href="#" class="btn btn--white">Book now!</a>
+								<button class="btn btn--white">Book now!</button>
 							</div>
 						</div>
 					</div>
@@ -248,7 +260,7 @@
 									<p class="card__price-only">Only</p>
 									<p class="card__price-value">897 &euro;</p>
 								</div>
-								<a href="#" class="btn btn--white">Book now!</a>
+								<button class="btn btn--white">Book now!</button>
 							</div>
 						</div>
 					</div>
@@ -389,6 +401,26 @@
 		</div>
 	</footer>
 
+	<div class="modal">
+		<div class="modal__content">
+			<div class="modal__close">&times;</div>
+			<div class="modal__left">
+				<img class="modal__img" src="./img/nat-8.jpg" alt="Tour photo">
+				<img class="modal__img" src="./img/nat-9.jpg" alt="Tour photo">
+			</div>
+			<div class="modal__right">
+				<h2 class="heading-secondary mb-2">Start booking now</h2>
+				<h3 class="heading-tertiary mb-2">Important &ndash; Please read these terms before booking</h3>
+				<p class="modal__text">
+					Pellentesque aliquet justo eget elit tincidunt volutpat. Sed tempor sem sed ligula vehicula, non tempor sem interdum. 
+					Nulla vitae orci quis libero fermentum tempor quis id tortor. Vestibulum consequat sodales purus, a commodo dolor semper vel. 
+					Nulla viverra volutpat dui, a pulvinar magna interdum vel. Donec efficitur egestas nunc, vitae malesuada diam molestie eu. Nulla id vehicula ex. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vivamus scelerisque sagittis eleifend. 
+					Vivamus lobortis tellus risus, quis facilisis felis porttitor non. Ut aliquet ultrices diam ut venenatis. Praesent mi massa, scelerisque sed posuere vitae, auctor sit amet dolor.
+				</p>
+				<a href="#" class="btn btn--green">Book now</a>
+			</div>
+		</div>
+	</div>
 </body>
 
 </html>
