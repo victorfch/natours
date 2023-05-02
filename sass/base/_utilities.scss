@@ -2,6 +2,12 @@
   text-align: center;
 }
 
+@include respond(tab-port) {
+  .w-md-100 {
+    width: 100%;
+  }
+}
+
 @each $value in $spaces {
   .mb-#{$value} {
     margin-bottom: #{$value}rem !important;
@@ -9,5 +15,19 @@
 
   .mt-#{$value} {
     margin-top: #{$value}rem !important;
+  }
+}
+
+@each $value in $spaces {
+  .mb-md-#{$value} {
+    @include respond(tab-port) {
+      margin-bottom: #{$value}rem !important;
+    }
+  }
+
+  .mt-md-#{$value} {
+    @include respond(tab-port) {
+      margin-top: #{$value}rem !important;
+    }
   }
 }
